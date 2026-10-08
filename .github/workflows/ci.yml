@@ -1,0 +1,22 @@
+name: WindowFlow checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s tests -v
+      - run: pip install --no-deps .
+      - run: |
+          windowflow --db demo.sqlite init --window-ms 1000 --lateness-ms 500
+          windowflow --db demo.sqlite ingest examples/events.json
+          windowflow --db demo.sqlite advance 2000
+          windowflow --db demo.sqlite report

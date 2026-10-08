@@ -1,0 +1,8 @@
+[
+  {"id":"request-1","key":"checkout","timestamp_ms":100,"value":12},
+  {"id":"request-2","key":"checkout","timestamp_ms":800,"value":20},
+  {"id":"request-3","key":"checkout","timestamp_ms":300,"value":8},
+  {"id":"request-1","key":"checkout","timestamp_ms":100,"value":12},
+  {"id":"request-4","key":"checkout","timestamp_ms":1600,"value":15},
+  {"id":"request-5","key":"checkout","timestamp_ms":400,"value":99}
+]

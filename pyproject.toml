@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "windowflow"
+version = "0.1.0"
+description = "Durable event-time windows with transactional deduplication and late-event accounting"
+requires-python = ">=3.11"
+license = "MIT"
+[project.scripts]
+windowflow = "windowflow:main"
+[tool.setuptools]
+py-modules = ["windowflow"]

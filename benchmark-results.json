@@ -1,0 +1,30 @@
+{
+  "workload": "synthetic ascending timestamps, 10 keys, integer values 0-99",
+  "scope": "local SQLite WAL, synchronous=FULL, commits included; no network or downstream sink",
+  "events": 10000,
+  "batch_size": 250,
+  "runs": 3,
+  "python": "3.14.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "median_events_per_second": 125674.05760403098,
+  "samples": [
+    {
+      "ingest_seconds": 0.07716983300633729,
+      "events_per_second": 129584.3156635934,
+      "replay_seconds": 0.029024667106568813,
+      "duplicate_events": 10000
+    },
+    {
+      "ingest_seconds": 0.08132095891050994,
+      "events_per_second": 122969.52881488462,
+      "replay_seconds": 0.02950845891609788,
+      "duplicate_events": 10000
+    },
+    {
+      "ingest_seconds": 0.07957091694697738,
+      "events_per_second": 125674.05760403098,
+      "replay_seconds": 0.030999625101685524,
+      "duplicate_events": 10000
+    }
+  ]
+}
